@@ -48,7 +48,7 @@ const Benefits = () => {
           {/* item 2 */}
           <div className="flex-1 flex flex-col gap-6 w-full max-w-[360px] ">
             <div>
-              <div className="flex items-center justify-start gap-2 mb-4 ">
+              <div className="flex items-center justify-start xl:justify-end gap-2 mb-4 ">
                 <Image
                   src={"/assets/icons/build.svg"}
                   height={24}
@@ -59,33 +59,44 @@ const Benefits = () => {
                   Build to last
                 </h6>
               </div>
-              <p>
-                Dsign to eithstand the rigors of active lifestyle, ensuring
+              <p className="xl:text-right ">
+                Dsigned to eithstand the rigors of active lifestyle, ensuring
                 longevity
               </p>
             </div>
             {/*  */}
             <div>
-              <div className="flex items-center justify-start gap-2 mb-4 ">
+              <div className="flex items-center justify-start xl:justify-end gap-2 mb-4 ">
                 <Image
-                  src={"/assets/icons/trophy.svg"}
+                  src={"/assets/icons/check.svg"}
                   height={24}
                   width={24}
                   alt=""
                 />
                 <h6 className="uppercase text-white font-bold ">
-                  Performance Excellence
+                  Wide Selection
                 </h6>
               </div>
-              <p>
-                Crafted from high-performance materials for unmatched durability
-                and comfort
+              <p className="xl:text-right xl:max-w-[290px] xl:ml-auto ">
+                Explore a diverse range of products tailored to meet every
+                athlete&apos;s needs
               </p>
             </div>
           </div>
         </div>
         {/* for the image */}
-        <div></div>
+        <div className="w-full h-[280px] xl:h-auto xl:absolute top-0 bottom-0 left-0 right-0 ">
+          <div className="w-full h-full bg-[url('/assets/img/benefits/logo.png')] bg-bottom bg-no-repeat absolute -bottom-56 "></div>
+          <div className="w-full h-full flex justify-center items-end relative ">
+            <Image
+              src={"/assets/img/benefits/s1.png"}
+              width={916}
+              height={604}
+              alt=""
+              className="absolute xl:top-16 z-50 "
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

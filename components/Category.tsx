@@ -99,7 +99,7 @@ const Category = () => {
           <div>
             <h6 className="h6 pb-4 mb-6 border-b-2 ">Summer Casual </h6>
             <ul className="flex flex-col gap-4 ">
-              {catergoryLinks.Inspiration.map((links) => (
+              {catergoryLinks.SummerCasual.map((links) => (
                 <li key={links.name}>
                   <a href={links.href} className="links-secondary ">
                     {links.name}{" "}
