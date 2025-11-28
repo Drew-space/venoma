@@ -1,10 +1,18 @@
+"use client";
+import { motion } from "motion/react";
 import Link from "next/link";
 
 import Slider from "./Slider";
 
 const Latest = () => {
   return (
-    <section className="mt-24">
+    <motion.section
+      initial={{ opacity: 0, x: 200 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="mt-24"
+    >
       <div className="container mx-auto">
         <div className="flex justify-between items-end mb-[75px] ">
           <h4 className="h4 w-max border-b-2  ">
@@ -20,7 +28,7 @@ const Latest = () => {
         </div>
         <Slider />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

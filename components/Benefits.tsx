@@ -1,9 +1,17 @@
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
 
 const Benefits = () => {
   return (
     <section className="mt-24 pt-[72px] min-h-[540px] bg-[url('/assets/img/benefits/bg.png')] bg-no-repeat bg-cover relative overflow-hidden ">
-      <div className="container mx-auto flex flex-col ">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="container mx-auto flex flex-col "
+      >
         {/* for the text */}
         <div className="relative  flex flex-col md:flex-row justify-between gap-6 md:gap-48 text-gray-300 ">
           {/* item 1 */}
@@ -86,7 +94,7 @@ const Benefits = () => {
         </div>
         {/* for the image */}
         <div className="w-full h-[280px] xl:h-auto xl:absolute top-0 bottom-0 left-0 right-0 ">
-          <div className="w-full h-full bg-[url('/assets/img/benefits/logo.png')] bg-bottom bg-no-repeat absolute -bottom-56 "></div>
+          <div className="w-full h-full bg-[url('/assets/img/benefits/logo.png' )] bg-bottom bg-no-repeat absolute -bottom-56 "></div>
           <div className="w-full h-full flex justify-center items-end relative ">
             <Image
               src={"/assets/img/benefits/s1.png"}
@@ -97,7 +105,7 @@ const Benefits = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

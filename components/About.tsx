@@ -1,9 +1,17 @@
-import {} from "react-icons";
+"use client";
+import { motion } from "motion/react";
+
 import { MdOutlineHistoryEdu, MdTrackChanges } from "react-icons/md";
 
 const About = () => {
   return (
-    <section className="pt-24">
+    <motion.section
+      initial={{ opacity: 0, x: -200 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="pt-24"
+    >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-16 ">
           <h2 className="h2">Founded with a passion for excellence</h2>
@@ -37,7 +45,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

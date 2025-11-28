@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { motion } from "motion/react";
 
 const Footer = () => {
   const catergoryLinks = {
@@ -38,7 +39,13 @@ const Footer = () => {
 
   return (
     <footer className=" pt-24">
-      <div className="container mx-auto">
+      <motion.div
+        initial={{ opacity: 0, x: -200 }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        className="container mx-auto"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
           {/* 1 */}
           <div>
@@ -93,7 +100,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

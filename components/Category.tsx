@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "motion/react";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -35,7 +38,13 @@ const Category = () => {
   };
 
   return (
-    <section className="mt-24 ">
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      transition={{ duration: 1.5 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="mt-24 "
+    >
       <div className="container mx-auto">
         <div className="flex justify-between items-end mb-[72px] ">
           <h4 className="h4 w-max border-b-2 "> Shop by Category </h4>
@@ -136,7 +145,7 @@ const Category = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

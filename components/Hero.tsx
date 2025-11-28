@@ -1,10 +1,19 @@
+"use client";
+
 import { FaArrowRight, FaFire, FaPlay } from "react-icons/fa";
+import { motion } from "motion/react";
 //
 
 const Hero = () => {
   return (
     <section className="bg-gray-50 xl:h-[1064px]  bg-[url(/assets/img/hero/bg.png)] bg-no-repeat bg-position-[-60%] md:bg-bottom-right xl:bg-right">
-      <div className="container mx-auto flex items-center h-full ">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="container mx-auto flex items-center h-full "
+      >
         <div className="relative flex flex-col xl:flex-row items-center w-full ">
           {/* For the */}
           <div className=" w-full max-w-[760px] mb-24 md:mb-0 flex flex-col items-center xl:items-start ">
@@ -45,7 +54,7 @@ const Hero = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
